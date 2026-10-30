@@ -18,10 +18,15 @@ This project covers asynchronous generators and async comprehensions in Python 3
 
 ## Tasks
 
-### 0. Async Generator
-**File:** `0-async_generator.py`
+### 1. Async Comprehensions
+**File:** `1-async_comprehension.py`
 
-A coroutine called `async_generator` that takes no arguments. It loops 10 times, waits 1 second asynchronously each time, then yields a random number between 0 and 10.
+A coroutine `async_comprehension` that collects 10 random numbers from `async_generator` using an async comprehension and returns them.
+
+### 2. Run time for four parallel comprehensions
+**File:** `2-measure_runtime.py`
+
+A coroutine `measure_runtime` that runs `async_comprehension` four times in parallel with `asyncio.gather`, measures the total runtime, and returns it (roughly 10 seconds).
 
 **Usage:**
 ```bash
